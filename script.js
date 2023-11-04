@@ -28,7 +28,7 @@ request.onload=function(){
     let pop=result.reduce((acc,cv)=>acc+cv.population,0)
     console.log("total population of countries:",pop);
      //e.Print the country that uses US dollars as currency.
-     let doller=result.filter((e)=>{return e.currencies=="USD"})
+     let doller=result.filter((e)=> e.currencies&&e.currencies.USD)
      let us=doller.map((u)=>{ return u.name.common})
      console.log(us)
     }
